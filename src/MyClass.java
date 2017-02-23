@@ -21,12 +21,17 @@ public class MyClass {
 		// TODO Auto-generated method stub
 		
 		System.out.println(new File(".").getAbsoluteFile());
-		readData("src/test.in");
+		readData("src/kittens.in");
 
+		System.out.println(Array.getLength(Caches));
+		
 		for(int i = 0; i < Array.getLength(Caches); i++){
+			System.out.println("yada "+i);
 			for(int j = 0; j < S.length; j++){
 				for(int e = 0; e < Array.getLength(Endpoints); e++){
 					int a = Endpoints[e].datacenterLatency;
+					
+					
 					
 					if (!Endpoints[e].latencyPerCache.containsKey(i)){continue;}
 					if (!Endpoints[e].videosRequestedNr.containsKey(j)){continue;}
@@ -54,6 +59,7 @@ public class MyClass {
 					System.out.println("hello"+f);
 					remaining -= S[max];
 					Caches[f].addHash(max);
+					System.out.println("hash added "+f);
 				}
 			}
 			
@@ -84,6 +90,8 @@ public class MyClass {
 			int R = file.nextInt();
 			int C = file.nextInt();
 			int X = file.nextInt();
+			
+			System.out.println(C);
 			
 			Caches = new Cache[C];
 			for (int i = 0; i < C; i++ ){
@@ -130,7 +138,7 @@ public class MyClass {
 
 	public static void generateResult(String index){
 		int nrOfCacheServers = Array.getLength(Caches);
-		
+		System.out.println("yad"+nrOfCacheServers);
 		Writer wr;
 		try {
 			wr = new FileWriter("solution"+index+".txt");
