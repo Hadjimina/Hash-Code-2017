@@ -5,7 +5,7 @@ public class Cache {
 	int size;
 	HashSet<Integer> videosToStore;
 
-	public void Cache(int size, int nrOfVideos) {
+	public Cache(int size, int nrOfVideos) {
 		this.size = size;
 		speedup = new int[nrOfVideos];
 		videosToStore = new HashSet<Integer>();
