@@ -11,7 +11,6 @@ public class Endpoint {
 		//this.videosRequestedNr = videosRequestedNr;
 		this.datacenterLatency = datacenterLatency;
 		
-		
 	}
 	
 	public void setVideosRequestedNr(Map videosRequestedNr){

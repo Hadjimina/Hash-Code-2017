@@ -1,14 +1,20 @@
+import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Cache {
-	int[] speedup;
+	
 	int size;
-	HashSet<Integer> videosToStore;
+	int[] speedup;
+	ArrayList<Integer> videosToStore;
 
 	public Cache(int size, int nrOfVideos) {
 		this.size = size;
 		speedup = new int[nrOfVideos];
-		videosToStore = new HashSet<Integer>();
+		videosToStore = new ArrayList<>();
+	}
+	
+	public void addHash(int x ){
+		this.videosToStore.add(x);
 	}
 
 }
